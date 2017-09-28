@@ -10,11 +10,10 @@ import javax.persistence.Id
  * Created by m_632767 on 9/21/17.
  */
 @Entity
-
 data class User(
+    val email: String? = "",
+    val firstName: String? = "",
+    val lastName: String? = "",
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
-    var id: Long? = null,
-    var email: String? = "",
-    var firstName: String? = "",
-    var lastName: String? = "")
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    val id: Long? = null)
